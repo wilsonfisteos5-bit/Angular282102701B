@@ -1,0 +1,215 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #1d212a;
+  color: #f2f4f7;
+}
+
+.admin-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  background: #1d212a;
+  overflow: hidden;
+}
+
+.admin-header {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 58px;
+  flex: 0 0 58px;
+  background: #212529;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-brand {
+  display: flex;
+  flex: 0 0 253px;
+  align-items: center;
+  gap: 10px;
+  padding: 0 30px;
+  background: #343a40;
+  color: #f2f4f7;
+  font-size: 1.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.admin-brand img {
+  flex: 0 0 36px;
+  border-radius: 50%;
+}
+
+.admin-header app-header {
+  flex: 1 1 auto;
+  display: block;
+  min-width: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  background: #1d212a;
+  overflow: hidden;
+}
+
+.admin-sidebar {
+  flex: 0 0 253px;
+  width: 253px;
+  min-width: 0;
+  background: #2c3038;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  overflow-y: auto;
+}
+
+.admin-sidebar app-sidebar {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-sidebar ::ng-deep .app-sidebar {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 100%;
+  min-height: 100%;
+}
+
+.admin-content-wrapper {
+  flex: 1;
+  background: #2b3035;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+}
+
+.admin-content-wrapper app-content {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-shell ::ng-deep .app-header {
+  background: #212529 !important;
+  border: none !important;
+  min-height: 58px !important;
+  color: #eef2f6 !important;
+}
+
+.admin-shell ::ng-deep .app-header .nav-link,
+.admin-shell ::ng-deep .app-header .navbar-nav .nav-link,
+.admin-shell ::ng-deep .app-header .brand-text,
+.admin-shell ::ng-deep .app-header .navbar-nav a,
+.admin-shell ::ng-deep .app-header .dropdown-item {
+  color: #eef2f6 !important;
+}
+
+.admin-shell ::ng-deep .app-sidebar,
+.admin-shell ::ng-deep .app-sidebar .sidebar-wrapper,
+.admin-shell ::ng-deep .app-sidebar .sidebar-menu,
+.admin-shell ::ng-deep .sidebar {
+  background: #343a40 !important;
+  color: #edf1f4 !important;
+}
+
+.admin-shell ::ng-deep .app-main,
+.admin-shell ::ng-deep .app-content {
+  background: #2b3035 !important;
+  color: #edf1f4 !important;
+}
+
+.admin-shell ::ng-deep .card {
+  background: #212529 !important;
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  color: #edf1f4 !important;
+}
+
+.admin-shell ::ng-deep .info-box {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: none;
+  background: #212529 !important;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--mentions {
+  background-color: #198754 !important;
+  color: #f8f9fa !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--mentions :is(.info-box-text, .info-box-number, .info-box-icon) {
+  color: #f8f9fa !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--downloads {
+  background-color: #dc3545 !important;
+  color: #f8f9fa !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--downloads :is(.info-box-text, .info-box-number, .info-box-icon) {
+  color: #f8f9fa !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--messages {
+  background-color: #0dcaf0 !important;
+  color: #111 !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--messages :is(.info-box-text, .info-box-number, .info-box-icon) {
+  color: #111 !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--inventory {
+  background-color: #ffc107 !important;
+  color: #111 !important;
+}
+
+.admin-shell ::ng-deep .dashboard-summary-box--inventory :is(.info-box-text, .info-box-number, .info-box-icon) {
+  color: #111 !important;
+}
+
+.admin-shell ::ng-deep .info-box-text,
+.admin-shell ::ng-deep .info-box-number,
+.admin-shell ::ng-deep .card-title,
+.admin-shell ::ng-deep .progress-group,
+.admin-shell ::ng-deep .text-center,
+.admin-shell ::ng-deep h1,
+.admin-shell ::ng-deep .breadcrumb,
+.admin-shell ::ng-deep .breadcrumb-item a,
+.admin-shell ::ng-deep .breadcrumb-item.active {
+  color: #edf1f4 !important;
+}
+
+.admin-shell ::ng-deep .nav-link.active,
+.admin-shell ::ng-deep .nav-link:hover {
+  background: rgba(255,255,255,0.04) !important;
+}
+
+@media (max-width: 767.98px) {
+  .admin-brand,
+  .admin-sidebar {
+    flex-basis: 220px;
+  }
+
+  .admin-sidebar {
+    width: 220px;
+  }
+
+  .admin-brand {
+    padding-inline: 16px;
+  }
+}

@@ -1,0 +1,13 @@
+:host {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 360px;
+}

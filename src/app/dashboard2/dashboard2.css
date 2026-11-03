@@ -1,0 +1,89 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	background: #f4f6f9;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light {
+	min-height: 100vh;
+	background: #f4f6f9;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .app-header {
+	background: #fff;
+	border-bottom: 1px solid #dee2e6;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .app-header .nav-link,
+:host ::ng-deep .dashboard2-light .app-header .navbar-nav a {
+	color: #343a40;
+}
+
+:host ::ng-deep .dashboard2-light .app-sidebar {
+	background: #f8f9fa !important;
+	border-right: 1px solid #dee2e6;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .app-sidebar .sidebar-menu .nav-link {
+	color: #343a40;
+}
+
+:host ::ng-deep .dashboard2-light .app-sidebar .sidebar-menu .nav-link:hover,
+:host ::ng-deep .dashboard2-light .app-sidebar .sidebar-menu .nav-link.active {
+	background: #e9ecef;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .app-sidebar .sidebar-menu .nav-link.active {
+	font-weight: 600;
+}
+
+:host ::ng-deep .dashboard2-light .app-sidebar .sidebar-search .form-control {
+	background: #fff;
+	border-color: #ced4da;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .app-main {
+	background: #f4f6f9;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .card,
+:host ::ng-deep .dashboard2-light .info-box:not(.dashboard-summary-box) {
+	background: #fff;
+	border: 1px solid #dee2e6;
+	color: #212529;
+	box-shadow: 0 1px 3px rgb(33 37 41 / 8%);
+}
+
+:host ::ng-deep .dashboard2-light .card-header,
+:host ::ng-deep .dashboard2-light .card-footer {
+	background: #fff;
+	border-color: #dee2e6;
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .card-title,
+:host ::ng-deep .dashboard2-light .progress-group,
+:host ::ng-deep .dashboard2-light .text-center,
+:host ::ng-deep .dashboard2-light .app-content-header h1 {
+	color: #212529;
+}
+
+:host ::ng-deep .dashboard2-light .btn-tool {
+	color: #6c757d;
+}
+
+:host ::ng-deep .dashboard2-light .progress {
+	background: #e9ecef;
+}
+
+:host ::ng-deep .dashboard2-light app-browser-usage-chart {
+	--browser-usage-legend-color: #495057;
+	--browser-usage-separator-color: #fff;
+}

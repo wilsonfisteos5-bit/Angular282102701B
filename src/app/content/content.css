@@ -1,0 +1,82 @@
+.popularity-sparkline {
+  width: 180px;
+  height: 30px;
+}
+
+.popularity-sparkline svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.popularity-sparkline path {
+  fill: none;
+  stroke: #0d6efd;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5px;
+}
+
+.browser-usage-chart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: 420px;
+}
+
+.browser-usage-chart-canvas {
+  position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+}
+
+.browser-usage-legend {
+  display: flex;
+  flex: 0 0 104px;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #ced4da;
+  font-size: 0.9rem;
+}
+
+.browser-usage-legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  border-radius: 50%;
+}
+
+.legend-dot--chrome { background: #0d6efd; }
+.legend-dot--edge { background: #20c997; }
+.legend-dot--firefox { background: #ffc107; }
+.legend-dot--safari { background: #d63384; }
+.legend-dot--opera { background: #6f42c1; }
+.legend-dot--ie { background: #adb5bd; }
+
+.browser-usage-card .card-footer .nav-link {
+  color: #3d8bfd;
+}
+
+@media (max-width: 575.98px) {
+  .browser-usage-chart {
+    height: 340px;
+    gap: 0.5rem;
+  }
+
+  .browser-usage-legend {
+    flex-basis: 90px;
+    font-size: 0.8rem;
+  }
+}

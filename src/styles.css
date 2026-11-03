@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+app-header,
+app-sidebar,
+app-content,
+app-footer{
+    display: contents;
+}
+
+.dashboard-summary-box {
+  min-height: 100px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 12%);
+}
+
+.dashboard-summary-box .info-box-icon {
+  flex: 0 0 88px;
+  width: 88px;
+  font-size: 2.25rem;
+}
+
+.dashboard-summary-box .info-box-content {
+  justify-content: center;
+  gap: 6px;
+}
+
+.dashboard-summary-box .info-box-text {
+  font-size: 1.125rem;
+}
+
+.dashboard-summary-box .info-box-number {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.dashboard-summary-box--inventory {
+  background-color: #ffc107 !important;
+  color: #111 !important;
+}
+
+.dashboard-summary-box--mentions {
+  background-color: #198754 !important;
+  color: #fff !important;
+}
+
+.dashboard-summary-box--downloads {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.dashboard-summary-box--messages {
+  background-color: #0dcaf0 !important;
+  color: #111 !important;
+}
+
+.dashboard-summary-box :is(.info-box-icon, .info-box-text, .info-box-number) {
+  color: inherit !important;
+}
+
+.browser-usage-card .card-footer .nav-link {
+  color: #3d8bfd;
+}
