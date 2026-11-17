@@ -1,0 +1,14 @@
+@media (max-width: 575.98px) {
+  .app-header .navbar-nav.ms-auto > .nav-item.dropdown > .dropdown-menu.dropdown-menu-lg {
+    position: fixed;
+    top: 3.5rem;
+    right: auto;
+    left: 50%;
+    width: min(280px, calc(100vw - 1rem));
+    max-width: calc(100vw - 1rem);
+    max-height: calc(100dvh - 5rem);
+    margin-top: 0;
+    overflow-y: auto;
+    transform: translateX(-50%);
+  }
+}

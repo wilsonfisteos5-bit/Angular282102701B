@@ -1,0 +1,78 @@
+<div class="app-wrapper" data-bs-theme="light">
+  <app-sidebar module-name="Chat"></app-sidebar>
+  <div class="app-content-wrapper">
+    <app-header></app-header>
+    <main class="app-main" id="main" tabindex="-1">
+      <div class="app-content-header">
+        <div class="container-fluid">
+          <div class="row align-items-center">
+            <div class="col-sm-6">
+              <h1 class="mb-0 fs-3">Chat</h1>
+            </div>
+            <div class="col-sm-6">
+              <nav aria-label="Breadcrumb">
+                <ol class="breadcrumb float-sm-end mb-0">
+                  <li class="breadcrumb-item"><a routerLink="/dashboard">Dashboard</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Chat</li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-content">
+        <div class="container-fluid">
+          <section class="card chat-card" aria-label="Percakapan dengan {{ contact.name }}">
+            <header class="chat-contact-header">
+              <div class="chat-contact">
+                <span class="chat-avatar" aria-hidden="true">{{ contact.initials }}</span>
+                <div>
+                  <h2 class="h6 mb-1">{{ contact.name }}</h2>
+                  <p class="contact-status mb-0">
+                    <span class="status-indicator" aria-hidden="true"></span>
+                    {{ contact.status }}
+                  </p>
+                </div>
+              </div>
+              <div class="contact-actions" aria-hidden="true">
+                <i class="bi bi-telephone"></i>
+                <i class="bi bi-camera-video"></i>
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+            </header>
+
+            <div class="message-list" aria-live="polite" aria-relevant="additions">
+              @for (message of messages(); track message.id) {
+                <article class="message-row" [class.message-row-outgoing]="message.from === 'agent'">
+                  <div class="message-bubble" [class.message-bubble-outgoing]="message.from === 'agent'">
+                    <p class="mb-1">{{ message.text }}</p>
+                    <time class="message-time">{{ message.time }}</time>
+                  </div>
+                </article>
+              }
+            </div>
+
+            <form class="chat-composer" (submit)="sendMessage($event)">
+              <span class="composer-icon" aria-hidden="true"><i class="bi bi-paperclip"></i></span>
+              <label class="visually-hidden" for="chat-message">Tulis pesan</label>
+              <input
+                id="chat-message"
+                class="form-control"
+                type="text"
+                [formControl]="messageControl"
+                placeholder="Type a message..."
+                autocomplete="off"
+              >
+              <span class="composer-icon" aria-hidden="true"><i class="bi bi-emoji-smile"></i></span>
+              <button class="btn btn-primary send-button" type="submit" [disabled]="!messageControl.value.trim()" aria-label="Kirim pesan">
+                <i class="bi bi-send" aria-hidden="true"></i>
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <app-footer></app-footer>
+  </div>
+</div>
